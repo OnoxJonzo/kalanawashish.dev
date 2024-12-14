@@ -10,12 +10,13 @@
 }
 body {
   margin: 0%;
-  background-color: #912f40;
+  background-color: #fffffa;
 }
 h1 {
   color: #912f40;
 }
 ul {
+  list-style-type: none;
   display: flex;
 }
 li a {
@@ -42,4 +43,11 @@ h3::selection {
 }
 img::selection {
   background-color: #912f40;
+}
+h3 {
+  background-color: #fffffa;
+  border: #fffffa;
+}
+main {
+  margin: 3rem;
 }
