@@ -5,12 +5,19 @@
 - #702632
 - #fffffa */
 * {
-  background-color: #080705;
+  background-color: #fffffa;
   font-family: "Poppins", sans-serif;
 }
 body {
   margin: 0%;
   background-color: #fffffa;
+}
+header,
+nav,
+li,
+ul,
+li a {
+  background-color: #080705;
 }
 h1 {
   color: #912f40;
@@ -37,17 +44,28 @@ header {
   justify-content: center;
 }
 
-h3::selection {
+h2::selection,
+li a::selection {
   background-color: #912f40;
   color: #fffffa;
 }
 img::selection {
   background-color: #912f40;
 }
-h3 {
+h2 {
   background-color: #fffffa;
   border: #fffffa;
+  margin: 2rem;
 }
 main {
-  margin: 3rem;
+  margin: 5rem;
+}
+figure {
+  margin: 0;
+}
+div {
+  background-color: #fffffa;
+}
+a {
+  background-color: #080705;
 }
