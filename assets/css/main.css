@@ -5,67 +5,253 @@
 - #702632
 - #fffffa */
 * {
-  background-color: #fffffa;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
 }
 body {
-  margin: 0%;
-  background-color: #fffffa;
-}
-header,
-nav,
-li,
-ul,
-li a {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
   background-color: #080705;
-}
-h1 {
-  color: #912f40;
-}
-ul {
-  list-style-type: none;
-  display: flex;
-}
-li a {
-  text-decoration: none;
-  color: #912f40;
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 2rem;
-  transition: 0.4s;
-  justify-content: center;
-}
-li a:hover {
   color: #fffffa;
 }
-
 header {
+  margin-top: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 100;
+}
+.logo {
+  font-size: 3rem;
+  color: #702632;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-align: center;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
 
-h2::selection,
-li a::selection {
-  background-color: #912f40;
+nav a {
+  font: 1.8rem;
   color: #fffffa;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
 }
-img::selection {
-  background-color: #912f40;
+nav a:hover,
+nav a.active {
+  color: #702632;
+  border-bottom: 3px solid #702632;
 }
-h2 {
-  background-color: #fffffa;
-  border: #fffffa;
-  margin: 2rem;
+
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #702632;
+    border-bottom: 3px solid #702632;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #080705;
+    border-top: 0.1rem solid rgba(0, 0, 0, 1);
+  }
+  nav.active {
+    display: block;
+  }
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #702632;
+  }
 }
-main {
-  margin: 5rem;
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
 }
-figure {
-  margin: 0;
-}
-div {
-  background-color: #fffffa;
-}
-a {
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
   background-color: #080705;
+}
+
+.home .home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span {
+  color: #702632;
+}
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.home-content p {
+  font-size: 1.7rem;
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #702632;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.home-img img:hover {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #702632;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #702632;
+}
+.social-icons a:hover {
+  color: #080705;
+  transform: scale(1.3) translateX(-5px);
+  background-color: #702632;
+  box-shadow: 0 0 25px #702632;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: #080705;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #702632;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #702632;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale3d(1.03);
+  background-color: #702632;
+  color: #fffffa;
+  box-shadow: 0 0 25px #702632;
+}
+
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Software Developer";
+  color: #702632;
+  animation: words 20s infinite;
+}
+.typing-text span::after {
+  content: "";
+  background-color: #080705;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #080705;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #702632;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Web Developer";
+  }
+  21%,
+  40% {
+    content: "Artist";
+  }
+  41%,
+  60% {
+    content: "Web Designer";
+  }
+  61%,
+  80% {
+    content: "Hockey Player";
+  }
+  81%,
+  100% {
+    content: "Gamer";
+  }
+}
+
+@media (max-width: 1000px) {
+  .home {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 995px) {
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+  .home .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
 }
