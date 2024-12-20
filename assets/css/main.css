@@ -16,15 +16,8 @@
   outline: none;
   text-decoration: none;
 }
-/* properties of body */
-body {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  background-color: #080705;
-  color: #fffffa;
-}
 
+/* Header */
 /* Properties for Header */
 header {
   position: fixed;
@@ -40,6 +33,7 @@ header {
   filter: drop-shadow(10px);
   z-index: 100;
 }
+
 /* properties for the Logo class*/
 .logo {
   font-size: 3rem;
@@ -49,6 +43,7 @@ header {
   transition: 0.5s ease;
   text-align: center;
 }
+
 /* What happens when Kalan Awashish is hovered over  */
 .logo:hover {
   transform: scale(1.1);
@@ -63,6 +58,7 @@ nav a {
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
 }
+
 /* Nav links when hover and with class actived */
 nav a:hover,
 nav a.active {
@@ -70,11 +66,22 @@ nav a.active {
   border-bottom: 3px solid #702632;
 }
 
+/* Body */
+/* properties of body */
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #080705;
+  color: #fffffa;
+}
+
 /* Section properties */
 section {
   min-height: 100vh;
   padding: 5rem 9% 5rem;
 }
+
 /* Properties for .home class */
 .home {
   display: flex;
@@ -90,24 +97,29 @@ section {
   font-weight: 700;
   line-height: 1.3;
 }
+
 /* properties of span */
 span {
   color: #702632;
 }
+
 /* Properties of h3 home-content class */
 .home-content h3 {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
 /* properties of p inside home-content class */
 .home-content p {
   font-size: 1.7rem;
 }
+
 /* Home-img class properties */
 .home-img {
   border-radius: 50%;
 }
+
 /* Properties of images inside home-img class */
 .home-img img {
   position: relative;
@@ -117,11 +129,13 @@ span {
   cursor: pointer;
   transition: 0.2s linear;
 }
+
 /* when user hovers over image inside home-img class */
 .home-img img:hover {
   font-size: 1.8rem;
   font-weight: 500;
 }
+
 /* social icons links class */
 .social-icons a {
   display: inline-flex;
@@ -137,6 +151,7 @@ span {
   transition: 0.3s ease;
   color: #702632;
 }
+
 /* What happens when the user hovers of the links inside social-icons class */
 .social-icons a:hover {
   color: #080705;
@@ -144,6 +159,7 @@ span {
   background-color: #702632;
   box-shadow: 0 0 25px #702632;
 }
+
 /* properties of btn */
 .btn {
   display: inline-block;
@@ -158,6 +174,7 @@ span {
   transition: 0.3s ease;
   cursor: pointer;
 }
+
 /* Properties of btn when user hovers over it */
 .btn:hover {
   transform: scale3d(1.03);
@@ -165,22 +182,26 @@ span {
   color: #fffffa;
   box-shadow: 0 0 25px #702632;
 }
+
 /* Properties of typing-text class */
 .typing-text {
   font-size: 34px;
   font-weight: 600;
   min-width: 17.5rem;
 }
+
 /* Properties of span inside typing-text class */
 .typing-text span {
   position: relative;
 }
+
 /* Properties of span before inside typing-text class */
 .typing-text span::before {
   content: "Software Developer";
   color: #702632;
   animation: words 20s infinite;
 }
+
 /* properties of span after inside typing-text class */
 .typing-text span::after {
   content: "";
@@ -192,12 +213,14 @@ span {
   right: -8;
   animation: cursor 0.6s infinite;
 }
+
 /* Animation for the flicker of new words */
 @keyframes cursor {
   to {
     border-left: 3px solid #702632;
   }
 }
+
 /* Animation for words */
 @keyframes words {
   0%,
@@ -206,7 +229,7 @@ span {
   }
   21%,
   40% {
-    content: "Artist";
+    content: "Software Engineer";
   }
   41%,
   60% {
@@ -221,6 +244,7 @@ span {
     content: "Gamer";
   }
 }
+
 /* Media screen */
 @media (max-width: 1000px) {
   .home {
@@ -237,14 +261,17 @@ span {
     margin: 5rem 4rem;
     align-items: center;
   }
+
   /* properties of h3 inside home-content */
   .home .home-content h3 {
     font-size: 2.5rem;
   }
+
   /* properties of h1 inside home-content */
   .home-content h1 {
     font-size: 5rem;
   }
+
   /* properties of images inside home-img */
   .home-img img {
     width: 70vw;
@@ -259,6 +286,7 @@ span {
   align-items: center;
   min-height: 100vh;
 }
+
 /* Properties of form inside contactus-container */
 .contactus-container form {
   display: flex;
@@ -268,6 +296,7 @@ span {
   width: 60%;
   height: 40%;
 }
+
 /* properties of h1 inside of form  */
 .contactus-container form h1 {
   color: #fffffa;
@@ -276,6 +305,7 @@ span {
   width: 100%;
   text-align: center;
 }
+
 /* Properties of input  */
 .contactus-container form input {
   width: 40%;
@@ -289,15 +319,18 @@ span {
   color: #fffffa;
   padding-left: 5px;
 }
+
 /* properties of input placeholder text */
 .contactus-container input::placeholder {
   color: #fffffa;
 }
+
 /* Properties of #lastname and #userphone classes */
 .contactus-container form #lastName,
 .contactus-container form #userPhone {
   margin-left: 20px;
 }
+
 /* properties of h2 inside form */
 .contactus-container form h2 {
   color: #fffffa;
@@ -306,6 +339,7 @@ span {
   text-align: center;
   margin-top: 20px;
 }
+
 /* properties of textarea */
 .contactus-container form textarea {
   border: 3px solid #702632;
@@ -318,6 +352,7 @@ span {
   min-height: 10vh;
   max-height: 10vh;
 }
+
 /* properties of submit button */
 .contactus-container form #submitButton {
   margin: 1.2rem;
@@ -326,6 +361,7 @@ span {
   font-weight: 600;
   color: #fffffa;
 }
+
 /* Properties of #submitbutton when user hovers over them */
 .contactus-container form #submitButton:hover {
   box-shadow: 0px 0px 60px #fffffa;
@@ -333,6 +369,7 @@ span {
   border: 3px solid #fffffa;
   transform: scale3d(1.03);
 }
+
 /* properties of all of the below when focused on by user */
 .contactus-container form,
 #lastName:focus,
@@ -342,6 +379,7 @@ span {
   background-color: #9a3747;
   transition: 0.3s ease-in;
 }
+
 /* properties when text-are is focused on */
 .contactus-container form textarea:focus {
   background-color: #dad9d9;
@@ -357,6 +395,7 @@ span {
     color: #080705;
   }
 
+  /* Header */
   /* Navigation links properties*/
   nav a {
     font-size: 30px;
@@ -366,12 +405,14 @@ span {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
   }
+
   /* nav bar links when hover and active class properties */
   nav a:hover,
   nav a.active {
     color: #702632;
     border-bottom: 3px solid #702632;
   }
+
   /* Body Properties */
   .home {
     display: flex;
@@ -380,6 +421,7 @@ span {
     gap: 8rem;
     background-color: #fffffa;
   }
+
   /* cursor properties */
   @keyframes cursor {
     to {
@@ -387,6 +429,7 @@ span {
       background-color: #fffffa;
     }
   }
+
   /* typing-text span after properties */
   .typing-text span::after {
     content: "";
@@ -398,6 +441,7 @@ span {
     right: -8;
     animation: cursor 0.6s infinite;
   }
+
   /* propertiees of class #submitbutton when hovered over by user */
   .contactus-container form #submitButton:hover {
     box-shadow: 0px 0px 60px #fffffa;
@@ -407,6 +451,7 @@ span {
     color: #080705;
     background-color: #fffffa;
   }
+
   /* properties of links inside social-icons class */
   .social-icons a {
     display: inline-flex;
@@ -422,6 +467,7 @@ span {
     transition: 0.3s ease;
     color: #702632;
   }
+
   /* properties of social icons links when user hovers over them */
   .social-icons a:hover {
     color: #fffffa;
@@ -429,6 +475,7 @@ span {
     background-color: #702632;
     box-shadow: 0 0 25px #702632;
   }
+
   /* properties of btn */
   .btn {
     display: inline-block;
@@ -443,6 +490,7 @@ span {
     transition: 0.3s ease;
     cursor: pointer;
   }
+
   /* properties when user hovers over the btn class */
   .btn:hover {
     transform: scale3d(1.03);
