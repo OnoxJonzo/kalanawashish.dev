@@ -43,3 +43,7 @@ figure img:hover {
 .figure-flex-direction {
   flex-direction: row;
 }
+/* Header Prop */
+header {
+  position: absolute;
+}

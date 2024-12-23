@@ -87,13 +87,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 5em;
   background-color: #080705;
 }
 
 /* Properties of h1 in home and home-cotent classes */
 .home .home-content h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -105,13 +105,14 @@ span {
 
 /* Properties of h3 home-content class */
 .home-content h3 {
-  font-size: 4rem;
+  font-size: 3.8rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 /* properties of p inside home-content class */
 .home-content p {
+  align-items: center;
   font-size: 1.7rem;
 }
 
@@ -154,9 +155,9 @@ span {
 
 /* What happens when the user hovers of the links inside social-icons class */
 .social-icons a:hover {
-  color: #080705;
+  color: #702632;
   transform: scale(1.3) translateX(-5px);
-  background-color: #702632;
+  background-color: #fffffa;
   box-shadow: 0 0 25px #702632;
 }
 
@@ -185,7 +186,7 @@ span {
 
 /* Properties of typing-text class */
 .typing-text {
-  font-size: 34px;
+  font-size: 2.2px;
   font-weight: 600;
   min-width: 17.5rem;
 }
@@ -199,18 +200,18 @@ span {
 .typing-text span::before {
   content: "Software Developer";
   color: #702632;
-  animation: words 20s infinite;
+  animation: words 14s infinite;
 }
 
 /* properties of span after inside typing-text class */
 .typing-text span::after {
   content: "";
   background-color: #080705;
-  position: absolute;
+  position: relative;
   width: calc(100%);
   height: 100%;
   border-left: 3px solid #080705;
-  right: -8;
+  left: 10px;
   animation: cursor 0.6s infinite;
 }
 
@@ -245,15 +246,33 @@ span {
   }
 }
 
-/* Media screen */
-@media (max-width: 1000px) {
-  .home {
-    gap: 4rem;
+/* for screen sizes above 1640px */
+@media (max-width: 1640px) {
+  /* properties of h1 inside home-content */
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+
+  /* properties of h3 inside home-content */
+  .home .home-content h3 {
+    font-size: 2.9rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 975px) {
+  /* properties of h1 inside home-content */
+  .home-content h1 {
+    font-size: 15px;
+  }
+
+  /* properties of h3 inside home-content */
+  .home .home-content h3 {
+    font-size: 2.4rem;
   }
 }
 
 /* Website changes after it goes below 600px */
-@media (max-width: 600px) {
+@media (max-width: 975px) {
   /* properties of home class */
   .home {
     flex-direction: column;
@@ -262,128 +281,20 @@ span {
     align-items: center;
   }
 
-  /* properties of h3 inside home-content */
-  .home .home-content h3 {
-    font-size: 2.5rem;
-  }
-
   /* properties of h1 inside home-content */
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
+  /* properties of h3 inside home-content */
+  .home .home-content h3 {
+    font-size: 3rem;
+  }
   /* properties of images inside home-img */
   .home-img img {
-    width: 70vw;
+    width: 50vw;
     margin-top: 4rem;
   }
-}
-
-/* Properties of container */
-.contactus-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* Properties of form inside contactus-container */
-.contactus-container form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  box-shadow: 20px 20px 50px #702632;
-  width: 60%;
-  height: 40%;
-}
-
-/* properties of h1 inside of form  */
-.contactus-container form h1 {
-  color: #fffffa;
-  font-weight: 500;
-  margin: 10px 0px 10px 0px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Properties of input  */
-.contactus-container form input {
-  width: 40%;
-  height: 5vh;
-  padding-right: 10px;
-  outline: none;
-  border: 3px solid #fffffa;
-  font-size: 15px;
-  margin-bottom: 10px;
-  background-color: #702632;
-  color: #fffffa;
-  padding-left: 5px;
-}
-
-/* properties of input placeholder text */
-.contactus-container input::placeholder {
-  color: #fffffa;
-}
-
-/* Properties of #lastname and #userphone classes */
-.contactus-container form #lastName,
-.contactus-container form #userPhone {
-  margin-left: 20px;
-}
-
-/* properties of h2 inside form */
-.contactus-container form h2 {
-  color: #fffffa;
-  font-weight: 300;
-  width: 50%;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* properties of textarea */
-.contactus-container form textarea {
-  border: 3px solid #702632;
-  color: #080705;
-  font-weight: 200;
-  font-size: 15px;
-  padding: 10px;
-  min-width: 60%;
-  max-width: 60%;
-  min-height: 10vh;
-  max-height: 10vh;
-}
-
-/* properties of submit button */
-.contactus-container form #submitButton {
-  margin: 1.2rem;
-  border: 3px solid #702632;
-  background-color: #080705;
-  font-weight: 600;
-  color: #fffffa;
-}
-
-/* Properties of #submitbutton when user hovers over them */
-.contactus-container form #submitButton:hover {
-  box-shadow: 0px 0px 60px #fffffa;
-  transition: 0.3s ease-in;
-  border: 3px solid #fffffa;
-  transform: scale3d(1.03);
-}
-
-/* properties of all of the below when focused on by user */
-.contactus-container form,
-#lastName:focus,
-#firstName:focus,
-#userPhone:focus,
-#userEmail:focus {
-  background-color: #9a3747;
-  transition: 0.3s ease-in;
-}
-
-/* properties when text-are is focused on */
-.contactus-container form textarea:focus {
-  background-color: #dad9d9;
-  transition: 0.3s ease-in;
 }
 
 /* Light Mode Properties */
@@ -440,16 +351,6 @@ span {
     border-left: 3px solid #080705;
     right: -8;
     animation: cursor 0.6s infinite;
-  }
-
-  /* propertiees of class #submitbutton when hovered over by user */
-  .contactus-container form #submitButton:hover {
-    box-shadow: 0px 0px 60px #fffffa;
-    transition: 0.3s ease-in;
-    border: 3px solid #080705;
-    transform: scale3d(1.03);
-    color: #080705;
-    background-color: #fffffa;
   }
 
   /* properties of links inside social-icons class */

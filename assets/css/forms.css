@@ -1,0 +1,120 @@
+/* Properties of container */
+.contactus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Properties of form inside contactus-container */
+.contactus-container form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 20px 20px 50px #702632;
+  width: 60%;
+  height: 40%;
+}
+
+/* properties of h1 inside of form  */
+.contactus-container form h1 {
+  color: #fffffa;
+  font-weight: 500;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Properties of input  */
+.contactus-container form input {
+  width: 40%;
+  height: 5vh;
+  padding-right: 10px;
+  outline: none;
+  border: 3px solid #fffffa;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background-color: #702632;
+  color: #fffffa;
+  padding-left: 5px;
+}
+
+/* properties of input placeholder text */
+.contactus-container input::placeholder {
+  color: #fffffa;
+}
+
+/* Properties of #lastname and #userphone classes */
+.contactus-container form #lastName,
+.contactus-container form #userPhone {
+  margin-left: 20px;
+}
+
+/* properties of h2 inside form */
+.contactus-container form h2 {
+  color: #fffffa;
+  font-weight: 300;
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* properties of textarea */
+.contactus-container form textarea {
+  border: 3px solid #702632;
+  color: #080705;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  min-width: 60%;
+  max-width: 60%;
+  min-height: 10vh;
+  max-height: 10vh;
+}
+
+/* properties of submit button */
+.contactus-container form #submitButton {
+  margin: 1.2rem;
+  border: 3px solid #702632;
+  background-color: #080705;
+  font-weight: 600;
+  color: #fffffa;
+}
+
+/* Properties of #submitbutton when user hovers over them */
+.contactus-container form #submitButton:hover {
+  box-shadow: 0px 0px 60px #fffffa;
+  transition: 0.3s ease-in;
+  border: 3px solid #fffffa;
+  transform: scale3d(1.03);
+}
+
+/* properties of all of the below when focused on by user */
+.contactus-container form,
+#lastName:focus,
+#firstName:focus,
+#userPhone:focus,
+#userEmail:focus {
+  background-color: #9a3747;
+  transition: 0.3s ease-in;
+}
+
+/* properties when text-are is focused on */
+.contactus-container form textarea:focus {
+  background-color: #dad9d9;
+  transition: 0.3s ease-in;
+}
+
+/* Light Mode Properties */
+
+@media (prefers-color-scheme: light) {
+  /* propertiees of class #submitbutton when hovered over by user */
+  .contactus-container form #submitButton:hover {
+    box-shadow: 0px 0px 60px #fffffa;
+    transition: 0.3s ease-in;
+    border: 3px solid #080705;
+    transform: scale3d(1.03);
+    color: #080705;
+    background-color: #fffffa;
+  }
+}
