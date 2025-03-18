@@ -312,7 +312,9 @@ span {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 975px) and (min-width: 0px) {
+/* For smaller Screens (Mobile Devices Accessibility) */
+
+@media screen and (orientation: portrait) and (max-width: 975px) and (min-width: 0px) {
   /* body properties */
   nav a {
     position: relative;
@@ -339,140 +341,5 @@ span {
   .home-img img {
     width: 50vw;
     margin-top: 4rem;
-  }
-}
-
-/* Website changes after it goes below 600px */
-@media screen and (orientation: portrait) and (max-width: 975px) and (min-width: 360) {
-  /* body properties */
-  nav a {
-    position: relative;
-  }
-
-  /* properties of home class */
-  .home {
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 5rem 4rem;
-    align-items: center;
-  }
-
-  /* properties of h1 inside home-content */
-  .home-content h1 {
-    font-size: 3rem;
-  }
-
-  /* properties of h3 inside home-content */
-  .home .home-content h3 {
-    font-size: 3rem;
-  }
-  /* properties of images inside home-img */
-  .home-img img {
-    width: 50vw;
-    margin-top: 4rem;
-  }
-}
-
-/* Light Mode Properties */
-
-@media (prefers-color-scheme: light) {
-  /* properties of body */
-  body {
-    background: #fffffa;
-    color: #080705;
-  }
-
-  /* Header */
-  /* Navigation links properties*/
-  nav a {
-    font-size: 30px;
-    color: #702632;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-  }
-
-  /* nav bar links when hover and active class properties */
-  nav a:hover,
-  nav a.active {
-    color: #702632;
-    border-bottom: 3px solid #702632;
-  }
-
-  /* Body Properties */
-  .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: #fffffa;
-  }
-
-  /* cursor properties */
-  @keyframes cursor {
-    to {
-      border-left: 3px solid #fffffa;
-      background-color: #fffffa;
-    }
-  }
-
-  /* typing-text span after properties */
-  .typing-text span::after {
-    content: "";
-    background-color: #080705;
-    position: relative;
-    width: calc(100%);
-    height: 100%;
-    border-left: 3px solid #080705;
-    left: 10px;
-    animation: cursor 0.6s infinite;
-  }
-
-  /* properties of links inside social-icons class */
-  .social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: 0.2rem solid #702632;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: #702632;
-  }
-
-  /* properties of social icons links when user hovers over them */
-  .social-icons a:hover {
-    color: #fffffa;
-    transform: scale(1.3) translateX(-5px);
-    background-color: #702632;
-    box-shadow: 0 0 25px #702632;
-  }
-
-  /* properties of btn */
-  .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: #fffffa;
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: #702632;
-    letter-spacing: 0.3rem;
-    font-weight: 600;
-    border: 2px solid #702632;
-    transition: 0.3s ease;
-    cursor: pointer;
-  }
-
-  /* properties when user hovers over the btn class */
-  .btn:hover {
-    transform: scale3d(1.03);
-    background-color: #702632;
-    color: #fffffa;
-    box-shadow: 0 0 25px #702632;
   }
 }
